@@ -1,5 +1,5 @@
 ---
-title: ここにタイトルを書きます。
+title: 3D MLT はどこに向かっているのか
 theme: default
 background: /background.png
 fonts:
@@ -14,9 +14,9 @@ favicon: /favicon.ico
 #  ogImage: https://cover.sli.dev
 ---
 
-# ここにも<br/>タイトルを<br/>書きます。
+# 3D MLT は<br/>どこに向かっているのか
 
-20XX/MM/DD
+2026/11/28 FOSS4G Hokkaido 2026
 
 @yutannihilation
 
@@ -30,16 +30,27 @@ backgroundSize: 70%
 
 ## 名前:
 
-湯谷啓明 (@yutannihilation)
+湯谷啓明
 
 ## 自己紹介:
 
-- 自己紹介をここに書きます。
+- 株式会社 MIERUNE で GIS エンジニア見習いをしています。
 
 ---
 
-# ここから内容
+# MLT とは
 
-1. あああ
-1. いいい
-1. ううう
+- MapLibre Tiles
+
+---
+
+- MLT とは
+- MLT と 3D
+  - 3D Tiles を目指しても勝てないので別路線
+  - 
+  - GeoJSON の代わりがないので必要
+- MLT v2
+- MLT v2 の実装の揉め事
+  - Java 廃止
+  - Wasm　は遅い
+- MLT にメッシュを入れる？
