@@ -37,15 +37,24 @@ backgroundSize: 70%
 - 株式会社 MIERUNE で GIS エンジニア見習いをしています。
 
 ---
+class: flex flex-col
+---
 
-# アンケート
+# 3D MLT はどこに向かっているのか？
 
-<v-clicks>
+<div class="my-auto text-center text-7xl">
+<v-click>
+結論から言うね。<br/>
+</v-click>
 
-- Q1. MVT（Mapbox Vector Tile）を知っていますか？
-- Q2. MLT（MapLibre Tile） を知っていますか？
+<v-click>
+👉それ、
+</v-click>
 
-</v-clicks>
+<v-click>
+**わからない**
+</v-click>
+</div>
 
 ---
 
@@ -108,54 +117,6 @@ title: 3D MLT の使用例
 <DemoQr />
 
 ---
-class: flex flex-col
----
-
-# 3D MLT はどこに向かっているのか？
-
-<div class="my-auto text-center text-7xl">
-<v-click>
-結論から言うね。<br/>
-</v-click>
-
-<v-click>
-👉それ、
-</v-click>
-
-<v-click>
-**わからない**
-</v-click>
-</div>
-
----
-
-# 3D MLT はどこに向かっているのか？
-
-<figure class="text-center mt-4">
-  <img src="/3d-concept.jpg" class="mx-auto max-h-100" />
-  <figcaption class="text-base mt-4 font-mono">
-    （出典：
-    <a href="https://www.linkedin.com/posts/maplibre_on-monday-28-september-830-pt-1130-edt-activity-7509229733000241152-zNSt" target="_blank" rel="noopener noreferrer">
-        LinkedIn での MapLibre 公式アカウントの投稿
-    </a>
-    ）
-  </figcaption>
-</figure>
-
----
-
-# 3D MLT はどこに向かっているのか？
-
-<v-clicks>
-
-- 目指すもの
-  - **カーナビ**みたいなやつ（例：Google Maps Immersive Navigation）
-- 目指さないもの：
-  - フォトリアリスティック系（**点群データ**とか、**実写のテクスチャ**とか）
-
-</v-clicks>
-
----
 
 # MapLibre で 3D をやる選択肢
 
@@ -167,19 +128,9 @@ class: flex flex-col
   - **サイズが大きい**
   - **タイルになっていないので一気にリクエスト**
 - 3D Tiles
-  - **ネイティブのレンダラがない**
+  - **オーバースペック**
 
 </v-clicks>
-
----
-class: flex flex-col
----
-
-# MapLibre で 3D をやる選択肢
-
-<div class="my-auto text-center">
-（そもそも MapLibre GL JS 本体だけではレンダリングできないという問題はいったん脇に置く）
-</div>
 
 ---
 
@@ -212,6 +163,34 @@ class: flex flex-col
 
 - 3D 対応は v2 から
 - まだ安定して使えるのは v1 だけ
+
+</v-clicks>
+
+---
+
+# 3D MLT はどこに向かっているのか？
+
+<figure class="text-center mt-4">
+  <img src="/3d-concept.jpg" class="mx-auto max-h-100" />
+  <figcaption class="text-base mt-4 font-mono">
+    （出典：
+    <a href="https://www.linkedin.com/posts/maplibre_on-monday-28-september-830-pt-1130-edt-activity-7509229733000241152-zNSt" target="_blank" rel="noopener noreferrer">
+        LinkedIn での MapLibre 公式アカウントの投稿
+    </a>
+    ）
+  </figcaption>
+</figure>
+
+---
+
+# 3D MLT はどこに向かっているのか？
+
+<v-clicks>
+
+- 目指すもの
+  - **カーナビ**みたいなやつ（例：Google Maps Immersive Navigation）
+- 目指さないもの：
+  - フォトリアリスティック系（**点群データ**とか、**実写のテクスチャ**とか）
 
 </v-clicks>
 
@@ -285,7 +264,7 @@ class: flex flex-col
 
 ---
 
-# みんな大好き PLATEAU も MLT に...？！
+# みんな大好き PLATEAU も MLT に...？
 
 <figure class="text-center mt-4">
   <img src="/citygml-pr.png" class="mx-auto max-h-100" />
@@ -293,7 +272,7 @@ class: flex flex-col
 
 ---
 
-# みんな大好き PLATEAU も MLT に...？！
+# みんな大好き PLATEAU も MLT に...？
 
 - サイズ的には、Draco 圧縮ありの 3D Tiles より数%小さくなるらしい
 - ただし、実際のレンダリング時のパフォーマンスは、まだレンダラがないので比較できない
@@ -304,10 +283,20 @@ class: flex flex-col
 
 <v-clicks>
 
-- 個人的には、仕様追加をやめてさっさとリリースしてほしい😠
+- 個人的には、仕様追加をやめてさっさとリリースしてほしい😠😠😠
 - でもまあ、killer feature が大事なのもわかるので何も言えない...
 
 </v-clicks>
+
+---
+
+# メッシュが v2 に入ったということは...？
+
+|  | 状況 | 概要 |
+|----|--|--|
+| v1 | リリース済 | MVT と同等 |
+| v2 | 絶賛開発中！ | 簡単な 3D に使える |
+| v3 | 未定 | 複雑な 3D に使える |
 
 ---
 
@@ -324,19 +313,17 @@ class: flex flex-col
 # v2 に入っていないもの
 
 - マテリアル
-- ...それくらい？
 
-<!--
+<v-click>
 
-- MLT とは
-- MLT と 3D
-  - 3D Tiles を目指しても勝てないので別路線
-  - 
-  - GeoJSON の代わりがないので必要
-- MLT v2
-- MLT v2 の実装の揉め事
-  - Java 廃止
-  - Wasm　は遅い
-- MLT にメッシュを入れる？
+（他に思いつかないので、v3 はまじで要らないかもしれない...）
 
--->
+</v-click>
+
+---
+
+# まとめ
+
+- MLT は v2 で 3D が扱えるようになる
+- メッシュも入った
+- どこへ向かっているかはわからない
