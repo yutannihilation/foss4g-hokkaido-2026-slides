@@ -51,6 +51,12 @@
         @apply text-5xl;
     }
 
+    &.section h1 {
+        @apply text-7xl;
+        font-weight: 900;
+        line-height: 1.3em;
+    }
+
     pre,
     code {
         @apply text-3xl;
