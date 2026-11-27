@@ -10,8 +10,8 @@ class: text-center
 comark: true
 selectable: false
 favicon: /favicon.ico
-# seoMeta:
-#  ogImage: https://cover.sli.dev
+seoMeta:
+ ogImage: https://yutannihilation.github.io/foss4g-hokkaido-2026-slides/thumbnail.png
 ---
 
 # 3D MLT は<br/>どこに向かっているのか
