@@ -35,6 +35,7 @@ backgroundSize: 70%
 ## 自己紹介:
 
 - 株式会社 MIERUNE で GIS エンジニア見習いをしています。
+- 好きな言語は、R と忍殺語です。
 
 ---
 class: flex flex-col
